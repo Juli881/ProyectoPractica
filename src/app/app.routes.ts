@@ -3,6 +3,8 @@ import { Routes } from '@angular/router';
 import { InicioComponent } from './inicio/inicio/inicio.component';
 import { ContactoComponent } from './formulario/contacto/contacto.component';
 import path from 'path';
+import { Component } from '@angular/core';
+
 
 export const routes: Routes = [
     {path:"",redirectTo:`/inicio`, pathMatch:`full`},
