@@ -1,6 +1,6 @@
 import { Component, Injectable, OnInit } from '@angular/core';
-import { Producto } from '../models/producto.model'; 
-import { CarritoService } from '../services/carrito.service'; 
+import { Producto } from '../model/producto.model';
+import { CarritoService } from '../servicios/carrito.service';
 
 @Component({
   selector: 'app-carrito',
@@ -17,8 +17,8 @@ export class CarritoComponent implements OnInit {
   constructor(private carritoService: CarritoService) {}
 
   ngOnInit(): void {
-    this.carritoService.carrito$.subscribe((productos) => {
-      this.productosEnCarrito = productos;
+    this.carritoService.carrito$.subscribe((Producto) => {
+      this.productosEnCarrito = Producto;
     });
   }
 
@@ -33,7 +33,7 @@ export class CarritoComponent implements OnInit {
   }
 
   eliminarProducto(productoId: number) {
-    this.carritoService.eliminardelcarrito(productoId);
+    this.carritoService.eliminarDelCarrito(productoId);
   }
 
   vaciarCarrito() {

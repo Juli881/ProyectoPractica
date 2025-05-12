@@ -1,16 +1,20 @@
 import { Routes } from '@angular/router';
 import { InicioComponent } from './inicio/inicio/inicio.component';
 import { ContactoComponent } from './formulario/contacto/contacto.component';
+import { ProductosComponent } from './productos/productos.component';
+import { CarritoComponent } from './carrito/carrito.component';
 import { Component } from '@angular/core';
 
 
 export const routes: Routes = [
     { path: "", component: InicioComponent },
-    
 
-    {path:'inicio',component:InicioComponent},
+    { path: 'inicio', component: InicioComponent },
 
-    {path:'contacto',component:ContactoComponent},
+    { path: 'contacto', component: ContactoComponent },
 
+    { path: 'productos', component: ProductosComponent },
+
+    { path: 'carrito', component: CarritoComponent }
 
 ];

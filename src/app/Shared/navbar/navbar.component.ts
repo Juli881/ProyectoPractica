@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
-import { producto } from '../../model/producto.model';
+import { Producto } from '../../model/producto.model';
 import { CarritoService } from '../../servicios/carrito.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
       //Escucha los cambios en el carrito para actualizar la cantidad de productos
-    this.carritoservice.carrito$.subscribe((productos: { producto: producto, cantidad: number }[]) => {
+    this.carritoservice.carrito$.subscribe((productos: { producto: Producto, cantidad: number }[]) => {
       this.cantidadProductos = productos.reduce((total, item) => total + item.cantidad, 0);
     });
   }
