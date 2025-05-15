@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Producto } from '../model/producto.model';
 import { CarritoService } from '../servicios/carrito.service';
+import { FavoritosService } from '../servicios/favoritos.service';
 
 @Component({
   selector: 'app-productos',
@@ -23,23 +24,40 @@ export class ProductosComponent {
     },
     {
       id: 2,
-      nombre: 'Reloj Deportivo',
-      descripcion: 'Ideal para entrenamientos intensos, resistente al agua.',
-      precio: 45.00,
-      imagen: 'https://via.placeholder.com/280x180?text=Reloj',
+      nombre: 'Producto 2',
+      descripcion: 'Un producto',
+      precio: 15000.00,
+      imagen: 'assets/brr brr patapim.jpg',
       disponibilidad: true
     },
     {
       id: 3,
-      nombre: 'Auriculares Bluetooth',
-      descripcion: 'Sonido envolvente con cancelación de ruido.',
-      precio: 59.99,
-      imagen: 'https://via.placeholder.com/280x180?text=Auriculares',
+      nombre: 'si',
+      descripcion: 'Un producto',
+      precio: 14000.99,
+      imagen: 'assets/brr brr patapim.jpg',
+      disponibilidad: true
+    },
+    {
+      id: 4,
+      nombre: 'si',
+      descripcion: 'Un producto',
+      precio: 14000.99,
+      imagen: 'assets/brr brr patapim.jpg',
+      disponibilidad: true
+    },
+    {
+      id: 5,
+      nombre: 'si',
+      descripcion: 'Un producto',
+      precio: 14000.99,
+      imagen: 'assets/brr brr patapim.jpg',
       disponibilidad: false
     }
   ];
 
-  constructor(private carritoService: CarritoService) {}
+  constructor( private carritoService: CarritoService,
+  private FavoritosService: FavoritosService ) { }
 
   agregar(producto: Producto): void {
     if (producto.disponibilidad) {
@@ -49,4 +67,12 @@ export class ProductosComponent {
       alert('Producto no disponible');
     }
   }
+agregarAFavoritos(producto: Producto): void {
+  if (producto.disponibilidad) {
+    this.FavoritosService.agregarAFavoritos(producto);
+    alert('Producto agregado a favoritos');
+  } else {
+    alert('Producto no disponible');
+  }
+}
 }

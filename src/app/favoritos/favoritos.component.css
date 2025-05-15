@@ -1,0 +1,136 @@
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  color: #4B0082;
+}
+
+.favoritos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 5%;
+}
+
+.favorito-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.favorito-imagen {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.favorito-detalle {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.favorito-detalle h2 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.cantidad-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.cantidad-control button {
+  background-color: #4B0082;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cantidad-control span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.btn-eliminar {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background-color: #b71c1c;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-vaciar,
+.btn-confirmar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-vaciar {
+  background-color: #888;
+  color: white;
+}
+
+.btn-confirmar {
+  background-color: #4B0082;
+  color: white;
+}
+
+.btn-vaciar:hover {
+  background-color: #666;
+}
+
+.btn-confirmar:hover {
+  background-color: #370061;
+}
+
+.mensaje-vacio {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .favorito-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favorito-imagen {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .favorito-detalle {
+    align-items: center;
+    text-align: center;
+  }
+}

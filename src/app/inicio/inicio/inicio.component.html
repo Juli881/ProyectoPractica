@@ -1,39 +1,67 @@
 <div id="carouselGenoma" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="assets/gattitos.jpg" class="d-block w-100" alt="gatos">
-        <div class="carousel-caption d-block">
-          <h5>GENOMA BARF</h5>
-          <p>Alimentación natural y balanceada para tus gatos</p>
-          <a routerLink="/productos" class="btn-carousel">Ver productos</a>
-        </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/gattitos.jpg" class="d-block w-100" alt="gatos">
+      <div class="carousel-caption d-block">
+        <h5>GENOMA BARF</h5>
+        <p>Alimentación natural y balanceada para tus gatos</p>
+        <a routerLink="/productos" class="btn-carousel">Ver productos</a>
       </div>
-      <div class="carousel-item">
-        <img src="assets/gatos.jpg" class="d-block w-100" alt="comiendogato">
-        <div class="carousel-caption d-block">
-          <h5>Comida fresca y saludable</h5>
-          <p>Nutrición BARF adaptada a tu mascota</p>
-          <a routerLink="/contacto" class="btn-carousel">Contáctanos</a>
-        </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/perro.jpg" class="d-block w-100" alt="perro">
+      <div class="carousel-caption d-block">
+        <h5>Comida fresca y saludable</h5>
+        <p>Nutrición BARF adaptada a tu mascota</p>
+        <a routerLink="/contacto" class="btn-carousel">Contáctanos</a>
       </div>
-      <div class="carousel-item">
-        <img src="assets/masgatos.jpg" class="d-block w-100" alt="Gato comiendo">
-        <div class="carousel-caption d-block">
-          <h5>Envíos a domicilio</h5>
-          <p>Recibe tu pedido en casa con total comodidad</p>
-          <a routerLink="/carrito" class="btn-carousel">Ir al carrito</a>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/cachorros comiendo.jpg" class="d-block w-100" alt="cachorros comiendo">
+      <div class="carousel-caption d-block">
+        <h5>Envíos a domicilio</h5>
+        <p>Recibe tu pedido en casa con total comodidad</p>
+        <a routerLink="/carrito" class="btn-carousel">Ir al carrito</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselGenoma" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselGenoma" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+<!-- Tarjetas debajo del carrusel -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <!-- Tarjeta comida para perro -->
+    <div class="col-md-5 mb-4">
+      <div class="card h-100 text-center">
+        <img src="assets/perro.jpg" class="card-img-top" alt="comida para perro">
+        <div class="card-body">
+          <h5 class="card-title">Comida para Perros</h5>
+          <p class="card-text">Descubre opciones saludables y deliciosas para tu perro.</p>
+          <a routerLink="/comida-perro" class="btn btn-primary">Ver comida de perro</a>
         </div>
       </div>
     </div>
-  
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGenoma" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselGenoma" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
+    <!-- Tarjeta comida para gato -->
+    <div class="col-md-5 mb-4">
+      <div class="card h-100 text-center">
+        <img src="assets/gato.jpg" class="card-img-top" alt="comida para gato">
+        <div class="card-body">
+          <h5 class="card-title">Comida para Gatos</h5>
+          <p class="card-text">Alimentación natural diseñada para el bienestar felino.</p>
+          <a routerLink="/comida-gato" class="btn btn-primary">Ver comida de gato</a>
+        </div>
+      </div>
+    </div>
   </div>
-  
+</div>
+

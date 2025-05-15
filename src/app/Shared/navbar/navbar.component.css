@@ -1,15 +1,19 @@
-body {
+ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #0e241d; /* Fondo verde de la página */
+    background-color: #032F2F; /* Fondo verde de la página */
     color: white;
+  }
+  
+  .logo-img {
+    height: 52px; /*tamaño del logo*/
   }
   
   .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0e241d; /* Fondo verde del navbar */
+    background-color: #032F2F; /* Fondo verde del navbar */
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -58,4 +62,3 @@ body {
   .carrito-link i {
     margin-right: 5px;
   }
-  

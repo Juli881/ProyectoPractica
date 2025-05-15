@@ -1,19 +1,27 @@
-app-footer {
-    display: block;
-    min-height: 80px; /* o el alto que suelas usar */
-    background-color: #291b3a;
-    color: white;
-  }
-.footer {
-    background-color: #1d122b; /* Violeta oscuro */
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
-    font-size: 1rem;
-  }
-  
-  .footer-content p {
-    margin: 0.3rem 0;
-  }
-  
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+footer {
+  background-color: #1d122b;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  margin-bottom: 10px;
+}
+
+       

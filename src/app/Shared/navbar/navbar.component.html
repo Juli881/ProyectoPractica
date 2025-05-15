@@ -1,11 +1,14 @@
 <nav class="navbar">
   <div class="navbar-logo">
-    <a routerLink="/" class="logo">TITULO</a>
+     <a routerLink="/">
+      <img src="assets/genoma logo.jpg" alt="Genoma Barf Logo" class="logo-img" />
+    </a>
   </div>
   <ul class="navbar-links">
     <li><a routerLink="/">Inicio</a></li>
     <li><a routerLink="/productos">Comidas</a></li>
     <li><a routerLink="/contacto">Contacto</a></li>
+    <li><a routerLink="/favoritos">Favoritos</a></li>
     <li class="carrito-link">
       <a [routerLink]="['/carrito']">
         <i class="bi bi-cart"></i>
