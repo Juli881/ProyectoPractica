@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   constructor(private carritoservice: CarritoService) {}
 
   ngOnInit(): void {
-      //Escucha los cambios en el carrito para actualizar la cantidad de productos
+    
     this.carritoservice.carrito$.subscribe((productos: { producto: Producto, cantidad: number }[]) => {
       this.cantidadProductos = productos.reduce((total, item) => total + item.cantidad, 0);
     });

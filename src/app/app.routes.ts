@@ -7,9 +7,8 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
 import { Component } from '@angular/core';
 
 
-
 export const routes: Routes = [
-    { path: "", component: InicioComponent },
+    { path: "", redirectTo:'/inicio' ,pathMatch:'full' },
 
     { path: 'inicio', component: InicioComponent },
 
@@ -18,6 +17,6 @@ export const routes: Routes = [
     { path: 'productos', component: ProductosComponent },
 
     { path: 'carrito', component: CarritoComponent },
- 
-    {path: 'favoritos', component: FavoritosComponent}
+
+    { path: 'favoritos', component: FavoritosComponent }
 ];

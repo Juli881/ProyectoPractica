@@ -62,3 +62,49 @@
   .carrito-link i {
     margin-right: 5px;
   }
+/* Contenedor del dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* Botón del dropdown */
+.dropdown-toggle {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:hover {
+  color: #a5d6a7;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+  background-color: #032F2F !important; /* Igual al navbar */
+  border: none;
+  box-shadow: none;
+  margin-top: 0.5rem;
+  border-radius: 0;
+  padding: 0.5rem 0;
+  min-width: 10rem;
+}
+
+/* Items del dropdown */
+.dropdown-item {
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #024040; /* Verde oscuro al pasar el mouse */
+  color: #a5d6a7;
+}

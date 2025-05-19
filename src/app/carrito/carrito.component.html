@@ -1,35 +1,53 @@
-<h1> Carrito de Compras</h1>
- <div *ngIf = "ProductosEnCarrito === 0">
-     <p>No hay productos en el Carrito</p>
- </div>
- 
- <table class="table">
-     <thead>
-         <tr>
-             <th>Imagen</th>
-             <th>Nombre</th>
-             <th>Descripcion</th>
-             <th>Precio</th>
-             <th>Cantidad</th>
-             <th>Acciones</th>
-         </tr>
-     </thead>
-     <tbody>
- 
-         <tr *ngFor = "let item of ProductosEnCarrito; let i = index">
-             <td><img [src] = "item.producto.imagen" alt="{{item.producto.nombre}}" style="width: 50px; height: 50px;"></td>
-             <td>{{ item.producto.imagen }}</td>
-             <td>{{ item.producto.descripcion }}</td>
-             <td>{{ item.producto.precio}}</td>
-             <td>
-                 <button (click) ="quitarCantidad(i)">-</button>
-                 {{item.cantidad}}
-                 <button (click) ="agregarCantidad(i)">+</button>
-             </td>
-             <td>
-                 <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
-             </td>
-         </tr>
-     </tbody>
- </table>
- <button (click) = "realizarCompra()" class="btn btn-success">Realizar Compra</button>
+<h1>Carrito de Compras</h1>
+<div class="carrito-container">
+<div *ngIf="productosEnCarrito.length === 0">
+  <p>No hay productos en el Carrito</p>
+</div>
+
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of productosEnCarrito; let i = index">
+        <td><img [src]="item.producto.imagen" alt="{{ item.producto.nombre }}" style="width: 50px; height: 50px;"></td>
+        <td>{{ item.producto.nombre }}</td>
+        <td>{{ item.producto.descripcion }}</td>
+        <td>{{ item.producto.precio * item.cantidad | currency }}</td>
+        <td>
+          <button (click)="quitarCantidad(i)">-</button>
+          <span *ngIf="!item.editando">{{ item.cantidad }}</span>
+          <input *ngIf="item.editando"
+                 type="number"
+                 [value]="item.cantidad"
+                 (input)="onCantidadChange($event, i)"
+                 min="1" />
+          <button (click)="agregarCantidad(i)">+</button>
+        </td>
+        <td>
+          <button *ngIf="!item.editando" (click)="activarEdicion(i)">
+            <i class="bi bi-pencil"></i> Editar
+          </button>
+          <button *ngIf="item.editando" (click)="desactivarEdicion(i)">
+            Confirmar
+          </button>
+          <button (click)="eliminarProducto(item.producto.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="acciones">
+  <button (click)="vaciarCarrito()" class="btn btn-secondary">Vaciar Carrito</button>
+  <button (click)="realizarCompra()" class="realizar-compra-btn">Realizar Compra</button>
+</div>
+</div>

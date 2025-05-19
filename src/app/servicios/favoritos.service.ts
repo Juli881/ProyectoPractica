@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Producto } from '../model/producto.model';
 import { FavoritosComponent } from '../favoritos/favoritos.component';
 
+
 @Injectable({
   providedIn: 'root'
 })

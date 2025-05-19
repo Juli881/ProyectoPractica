@@ -1,30 +1,26 @@
-import { Component, Injectable, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Producto } from '../model/producto.model';
 import { FavoritosService } from '../servicios/favoritos.service';
-import { CommonModule } from '@angular/common';
-import { NgFor } from '@angular/common';
-import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';  
 
 @Component({
   selector: 'app-favoritos',
+  imports: [CommonModule]  ,
   templateUrl: './favoritos.component.html',
-  styleUrls: ['./favoritos.component.css']
-})
-
-@Injectable({
-  providedIn: 'root'
+  styleUrls: ['./favoritos.component.css'],
+  
 })
 export class FavoritosComponent implements OnInit {
   productosEnFavorito: { producto: Producto; cantidad: number }[] = [];
 
-  constructor(private FavoritosService: FavoritosService) {}
+  constructor(private favoritosService: FavoritosService) {}
 
-ngOnInit(): void {
-  this.FavoritosService.favoritos$.subscribe((productos) => {
-    this.productosEnFavorito = productos;
-  });
-}
-
+  ngOnInit(): void {
+    this.favoritosService.favoritos$.subscribe((productos) => {
+      console.log('Productos en favoritos:', productos); 
+      this.productosEnFavorito = productos;
+    });
+  }
 
   agregarCantidad(index: number) {
     this.productosEnFavorito[index].cantidad++;
@@ -37,11 +33,11 @@ ngOnInit(): void {
   }
 
   eliminarFavorito(productoId: number) {
-    this.FavoritosService.eliminarFavorito(productoId);
+    this.favoritosService.eliminarFavorito(productoId);
   }
 
   vaciarFavorito() {
-    this.FavoritosService.vaciarFavorito();
+    this.favoritosService.vaciarFavorito();
   }
 
   realizarFavorito() {
