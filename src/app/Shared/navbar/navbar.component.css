@@ -1,77 +1,89 @@
- body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #032F2F; /* Fondo verde de la página */
-    color: white;
-  }
-  
-  .logo-img {
-    height: 52px; /*tamaño del logo*/
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #032F2F; /* Fondo verde del navbar */
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
-  
-  .navbar-logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 2rem;
-  }
-  
-  .navbar-links li {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-links a:hover {
-    color: #a5d6a7; /* Verde claro al pasar el mouse */
-  }
-  
-  .carrito-link i {
-    margin-right: 5px;
-  }
-/* Contenedor del dropdown */
+/* Fuente Oswald para los links del navbar */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e1e; /* Gris oscuro como fondo general */
+  color: white;
+}
+
+.logo-img {
+  height: 52px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000; /* Fondo negro del navbar */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  position: relative;
+}
+
+/* Logo centrado */
+.navbar-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 2rem;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo de los links del navbar */
+.navbar a,
+.navbar-links a,
+.dropdown-item {
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color: white !important; /* Forzado en blanco */
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar-links a:hover,
+.dropdown-item:hover {
+  color: #dcdcdc !important; /* Gris claro al pasar el mouse */
+}
+
+.carrito-link i {
+  margin-right: 5px;
+}
+
+/* Menú desplegable */
 .dropdown {
   position: relative;
 }
 
-/* Botón del dropdown */
 .dropdown-toggle {
   background-color: transparent;
   border: none;
-  color: white;
+  color: #e0e0e0;
+  font-family: 'Oswald', sans-serif;
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
@@ -79,32 +91,29 @@
 
 .dropdown-toggle:focus,
 .dropdown-toggle:hover {
-  color: #a5d6a7;
+  color: #dcdcdc;
   background-color: transparent;
   box-shadow: none;
 }
 
-/* Menú desplegable */
 .dropdown-menu {
-  background-color: #032F2F !important; /* Igual al navbar */
+  background-color: #121212 !important; /* Gris muy oscuro */
   border: none;
-  box-shadow: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   margin-top: 0.5rem;
-  border-radius: 0;
+  border-radius: 4px;
   padding: 0.5rem 0;
   min-width: 10rem;
 }
 
-/* Items del dropdown */
 .dropdown-item {
   background-color: transparent;
   color: white;
-  font-weight: 500;
   padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-item:hover {
-  background-color: #024040; /* Verde oscuro al pasar el mouse */
-  color: #a5d6a7;
+  background-color: #2c2c2c;
+  color: #ffffff;
 }

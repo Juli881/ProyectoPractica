@@ -1,34 +1,35 @@
-<nav class="navbar">
+<nav class="navbar navbar-expand-lg">
+
   <!-- Menú desplegable a la izquierda -->
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+  <div class="dropdown me-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown"
+      aria-expanded="false">
       ☰ Menú
     </button>
     <ul class="dropdown-menu" aria-labelledby="menuDropdown">
       <li><a class="dropdown-item" routerLink="/">Inicio</a></li>
-      <li><a class="dropdown-item" routerLink="/productos">Comidas</a></li>
+      <li><a class="dropdown-item" routerLink="/productos">Productos</a></li>
       <li><a class="dropdown-item" routerLink="/contacto">Contacto</a></li>
       <li><a class="dropdown-item" routerLink="/favoritos">Favoritos</a></li>
       <li><a class="dropdown-item" routerLink="/carrito">Carrito</a></li>
     </ul>
   </div>
 
-  <!-- Logo y título -->
-  <div class="navbar-logo ms-3">
-    <a routerLink="/">
-      <img src="" alt="" class="logo-img" />
-      <span>TITULO</span>
+  <!-- Logo -->
+  <div class="navbar-logo me-auto">
+    <a routerLink="/inicio">
+      <img src="assets/logoU.png" alt="Logo" class="logo-img" />
     </a>
   </div>
 
   <!-- Enlaces a la derecha -->
-  <ul class="navbar-links ms-auto">
-    <li><a routerLink="/">Inicio</a></li>
-    <li><a routerLink="/productos">Comidas</a></li>
-    <li><a routerLink="/contacto">Contacto</a></li>
-    <li><a routerLink="/favoritos">Favoritos</a></li>
+  <ul class="navbar-nav ms-auto d-flex flex-row align-items-center list-unstyled gap-3">
+    <li><a class="nav-link" routerLink="/">Inicio</a></li>
+    <li><a class="nav-link" routerLink="/productos">Productos</a></li>
+    <li><a class="nav-link" routerLink="/contacto">Contacto</a></li>
+    <li><a class="nav-link" routerLink="/favoritos">Favoritos</a></li>
     <li class="carrito-link">
-      <a [routerLink]="['/carrito']">
+      <a class="nav-link" [routerLink]="['/carrito']">
         <i class="bi bi-cart"></i>
         Carrito <span *ngIf="cantidadProductos > 0">({{ cantidadProductos }})</span>
       </a>

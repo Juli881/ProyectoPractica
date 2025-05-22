@@ -1,8 +1,8 @@
 /* General */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0d0d0d; /* Fondo negro */
-  color: #e0e0e0;
+  background-color: #0f0f0f;
+  color: #999; /* gris medio-oscuro */
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@ body {
 
 /* Título */
 h1 {
-  color: #e0e0e0;
+  color: #aaa; /* gris medio, no tan brillante */
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 30px;
@@ -33,16 +33,15 @@ h1 {
 .table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #1a1a1a; /* Gris muy oscuro */
-  border-radius: 10px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Cabecera de la tabla */
 .table thead {
-  background-color: #0a3d62; /* Azul oscuro */
-  color: #ffffff;
+  background-color: #262626;
+  color: #bbb;
   text-transform: uppercase;
 }
 
@@ -51,83 +50,81 @@ h1 {
   text-align: left;
 }
 
-/* Celdas */
 .table td {
   padding: 14px;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid #2a2a2a;
   vertical-align: middle;
-  color: #ccc;
+  color: #888; /* texto más tenue */
 }
 
+/* Precio más oscuro */
+.table td.precio {
+  color: #777; /* más oscuro que el texto normal */
+  font-weight: 500;
+}
+
+/* Imágenes */
 .table img {
   width: 50px;
   height: 50px;
   border-radius: 5px;
   object-fit: cover;
+  border: 1px solid #444;
 }
 
-/* Botones generales */
+/* Botones */
 button {
   padding: 6px 12px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   margin: 2px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  background-color: #2a2a2a;
+  color: #bbb;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Botón sumar/restar */
 button:nth-child(1),
 button:nth-child(3) {
-  background-color: #0a3d62;
-  color: white;
+  background-color: #3a3a3a;
 }
 
 button:nth-child(1):hover,
 button:nth-child(3):hover {
-  background-color: #145a92;
-}
-
-/* Editar */
-button i {
-  margin-right: 5px;
+  background-color: #4a4a4a;
 }
 
 button:nth-child(2) {
-  background-color: #3d3d3d;
-  color: white;
+  background-color: #353535;
 }
 
 button:nth-child(2):hover {
-  background-color: #5a5a5a;
+  background-color: #4c4c4c;
 }
 
-/* Confirmar edición */
 button:nth-child(2)[ng-reflect-ng-if="true"] {
-  background-color: #00796b;
+  background-color: #505050;
 }
 
-/* Eliminar */
 button:last-child {
-  background-color: #b33939;
-  color: white;
+  background-color: #2b2b2b;
 }
 
 button:last-child:hover {
-  background-color: #d9534f;
+  background-color: #3e3e3e;
 }
 
-/* Input edición */
+/* Inputs */
 input[type="number"] {
   width: 60px;
-  padding: 5px;
+  padding: 6px;
   border: 1px solid #555;
   background-color: #111;
-  color: #fff;
-  border-radius: 4px;
+  color: #bbb;
+  border-radius: 6px;
 }
 
-/* Acciones generales */
+/* Acciones */
 .acciones {
   display: flex;
   justify-content: center;
@@ -137,25 +134,25 @@ input[type="number"] {
 
 /* Botón Vaciar */
 .btn.btn-secondary {
-  background-color: #3d3d3d;
-  color: white;
+  background-color: #2f2f2f;
+  color: #aaa;
 }
 
 .btn.btn-secondary:hover {
-  background-color: #5c5c5c;
+  background-color: #444;
 }
 
 /* Botón Comprar */
 .realizar-compra-btn {
-  background-color: #0a3d62;
-  color: white;
+  background-color: #3b3b3b;
+  color: #bbb;
   padding: 12px 24px;
   border-radius: 6px;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .realizar-compra-btn:hover {
-  background-color: #145a92;
-  transform: scale(1.05);
+  background-color: #505050;
+  transform: scale(1.03);
 }
