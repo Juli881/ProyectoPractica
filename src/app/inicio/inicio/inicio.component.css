@@ -6,8 +6,10 @@
 }
 
 body {
-    background-color: #121212; /* fondo negro oscuro, no puro para dar profundidad */
-    color: #ccc; /* texto gris claro */
+    background-color: #121212;
+    /* fondo negro oscuro */
+    color: #ccc;
+    /* texto gris claro */
     min-height: 100vh;
 }
 
@@ -23,15 +25,13 @@ body {
 }
 
 .intro-section h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #ddd;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
+    font-size: 1.6rem;
+    /* más pequeño */
 }
 
 .intro-section p {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    /* más pequeño */
     color: #aaa;
     max-width: 600px;
     margin: 0 auto;
@@ -40,38 +40,47 @@ body {
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    /* tarjetas más delgadas */
     gap: 24px;
 }
 
 .card {
-    background-color: #1b1b1b; /* gris muy oscuro */
-    border-radius: 6px; /* bordes suaves pero definidos */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9); /* sombra sutil oscura */
+    background-color: #1b1b1b;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    cursor: default; /* sin pointer para quitar efecto clickable si no es link */
-    height: 420px;  
-    border: 1px solid #2e2e2e; /* borde oscuro para delimitar */
+    cursor: default;
+    height: auto;
+    border: 1px solid #2e2e2e;
     transition: box-shadow 0.3s ease;
+    max-width: 270px;
+    margin: 0 auto;
 }
 
 .card:hover,
 .card:focus {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 1); /* sombra un poco más marcada pero sin brillo */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 1);
 }
 
 .card-image {
+
     width: 100%;
-    height: 180px;
-    background-size: cover;
-    background-position: center center;
-    /* sin transform ni efectos */
+    height: 220px;
+    /* o el valor que desees */
+    object-fit: contain;
+    background-color: #1b1b1b;
+    /* o transparent si preferís */
+    padding: 0;
+    /* 🔴 Eliminamos los bordes */
+   
+    border-top: 8px solid #1b1b1b;
 }
 
 .card-content {
-    padding: 20px 22px;
+    padding: 16px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -79,28 +88,29 @@ body {
 }
 
 .card-content h2 {
-    font-size: 1.6rem;
+    font-size: 1rem;
     color: #bbb;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 600;
     line-height: 1.2;
 }
 
 .card-content p {
     color: #888;
-    font-size: 1rem;
-    margin-bottom: 14px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
     line-height: 1.4;
 }
 
 .btn {
     align-self: flex-start;
-    background-color: #222; 
-    color: #ccc; 
+    background-color: #222;
+    color: #ccc;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 4px;
     font-weight: 600;
+    font-size: 0.8rem;
     border: 1.5px solid #444;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     user-select: none;
@@ -108,7 +118,7 @@ body {
 
 .btn:hover,
 .btn:focus {
-    background-color: #333; 
+    background-color: #333;
     border-color: #666;
     color: #eee;
 }
@@ -117,11 +127,3 @@ body {
     outline: 2px solid #555;
     outline-offset: 2px;
 }
-.card-image {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
