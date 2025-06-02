@@ -69,13 +69,9 @@ body {
 
     width: 100%;
     height: 220px;
-    /* o el valor que desees */
     object-fit: contain;
     background-color: #1b1b1b;
-    /* o transparent si preferís */
-    padding: 0;
-    /* 🔴 Eliminamos los bordes */
-   
+    padding: 0; 
     border-top: 8px solid #1b1b1b;
 }
 

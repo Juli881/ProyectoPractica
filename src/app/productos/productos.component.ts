@@ -19,7 +19,7 @@ export class ProductosComponent {
       nombre: 'Brr brr patapim',
       descripcion: '',
       precio: 29.99,
-      imagen: 'assets/brr brr patapim.jpg',
+      imagen: 'assets/guitarra4.png',
       disponibilidad: true
     },
     {
@@ -27,7 +27,7 @@ export class ProductosComponent {
       nombre: 'Producto 2',
       descripcion: 'Un producto',
       precio: 15000.00,
-      imagen: 'assets/brr brr patapim.jpg',
+      imagen: 'assets/guitarra4.png',
       disponibilidad: true
     },
     {
