@@ -1,86 +1,105 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+/* CSS para productos, igual que inicio */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1 {
-  text-align: center;
-  margin-top: 30px;
-  color: #ccc; 
+body {
+    background-color: #121212;
+    color: #ccc;
+    min-height: 100vh;
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
 }
 
 .card {
-  background-color: #2f2b31; 
-  color: #fff;
-  border-radius: 10px;
-  width: 280px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1b1b1b;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    height: auto;
+    border: 1px solid #2e2e2e;
+    transition: box-shadow 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 16px;
+    position: relative;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+.card:hover,
+.card:focus {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 1);
 }
 
 .product-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 15px;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #1b1b1b;
+    padding: 0;
+    border-top: 8px solid #1b1b1b;
+    margin-bottom: 12px;
 }
 
 .card h2 {
-  margin: 10px 0 5px;
-  font-size: 1.2em;
+    font-size: 1.2rem; 
+    color: #bbb;
+    margin-bottom: 8px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .card p {
-  margin: 5px 0;
-  font-size: 0.95em;
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    line-height: 1.4;
 }
 
-button.btn-outline-primary {
-  margin-top: 10px;
-  padding: 10px;
-  width: 100%;
-  background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
+.btn {
+    align-self: flex-start;
+    background-color: #222;
+    color: #ccc;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1.5px solid #444;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+    margin-top: auto;
 }
 
-button.btn-outline-primary:hover {
-  background-color: #fff;
-  color: #150e1f;
+.btn:hover,
+.btn:focus {
+    background-color: #333;
+    border-color: #666;
+    color: #eee;
 }
 
 .favorito-icon {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  user-select: none;
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .favorito-icon:hover {
-  transform: scale(1.2);
-  color: #ff4d4d; /* rojo brillante al pasar el mouse */
+    color: #eee;
 }
