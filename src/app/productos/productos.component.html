@@ -1,6 +1,6 @@
-<h1>Productos</h1>
+<h1 class="titulo-seccion">Guitarras</h1>
 
-<!-- Sección de guitarras -->
+<!-- Sección de Guitarras -->
 <div class="card-container">
   <ng-container *ngIf="productos && productos.length">
     <ng-container *ngFor="let producto of productos">
@@ -20,9 +20,9 @@
     </ng-container>
   </ng-container>
 </div>
+<!-- Sección Amplificadores -->
+<h2 class="titulo-seccion">Amplificadores</h2>
 
-<!-- Sección de amplificadores -->
-<h2 style="margin-top: 60px;">Amplificadores</h2>
 <div class="card-container">
   <ng-container *ngFor="let amp of amplificadores">
     <div *ngIf="amp.disponibilidad" class="card">
@@ -31,9 +31,9 @@
       <h2>{{amp.nombre}}</h2>
       <p>{{amp.descripcion}}</p>
       <p>PRECIO: {{amp.precio | currency:'ARS' }}</p>
-       <p class="cuotas">
-          <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
-        </p>
+      <p class="cuotas">
+        <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
+      </p>
       <button type="button" class="btn btn-outline-primary" (click)="agregar(amp)">
         Agregar al carrito
       </button>

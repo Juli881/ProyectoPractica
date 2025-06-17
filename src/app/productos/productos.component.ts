@@ -87,7 +87,7 @@ export class ProductosComponent {
       nombre: 'Fender Champion 40',
       descripcion: 'Amplificador versátil con efectos integrados, ideal para práctica y escenario.',
       precio: 124999,
-      imagen: 'assets/champion40.png',
+      imagen: 'assets/amplificador1.png',
       disponibilidad: true
     },
     {
@@ -95,7 +95,7 @@ export class ProductosComponent {
       nombre: 'Marshall MG15GFX',
       descripcion: 'Compacto pero potente, con efectos digitales y diseño clásico Marshall.',
       precio: 99999,
-      imagen: 'assets/marshall_mg15gfx.png',
+      imagen: 'assets/amplificador2.png',
       disponibilidad: true
     },
     {
@@ -103,7 +103,7 @@ export class ProductosComponent {
       nombre: 'Boss Katana 50 MKII',
       descripcion: 'Amplificador de modelado digital con 50W de potencia y gran respuesta dinámica.',
       precio: 159999,
-      imagen: 'assets/katana50.png',
+      imagen: 'assets/amplificador3.png',
       disponibilidad: true
     },
     {
@@ -111,7 +111,7 @@ export class ProductosComponent {
       nombre: 'Orange Crush 20RT',
       descripcion: 'Sonido británico con distorsión poderosa y afinador incorporado.',
       precio: 114999,
-      imagen: 'assets/orange_crush20.png',
+      imagen: 'assets/amplificador4.png',
       disponibilidad: true
     }
   ];
