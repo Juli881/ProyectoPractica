@@ -1,34 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
 
 body {
-  background-color: #0b0b0b; /* más oscuro que antes */
-  font-family: 'Pirata One', cursive, 'Segoe UI', sans-serif;
+  background-color: #0b0b0b; 
+ font-family: 'UnifrakturCook', cursive;
   margin: 0;
   padding: 0;
-  color: #aaa; /* gris más oscuro */
+  color: #aaa; 
 }
-
+.sin-productos {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 1.2rem;
+  color: #757575;
+  text-align: center;
+  margin-top: 20px;
+}
 h1 {
   text-align: center;
+  font-family: 'UnifrakturCook', cursive;
   margin-top: 30px;
   font-size: 2.4rem;
-  color: #999; /* gris más oscuro */
+  color: #999; 
 }
 
 .table {
   width: 90%;
   max-width: 1000px;
-  margin: 20px auto; /* margen vertical menor */
+  margin: 20px auto; 
   border-collapse: collapse;
-  background-color: #121212; /* más oscuro */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.95); /* sombra más oscura */
+  background-color: #121212; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.95); 
   border-radius: 12px;
   overflow: hidden;
 }
 
 .table thead {
-  background-color: #333; /* más oscuro */
-  color: #ccc; /* gris claro */
+  background-color: #333; 
+  color: #ccc;
   font-weight: bold;
 }
 
@@ -36,7 +43,7 @@ h1 {
 .table td {
   padding: 16px;
   text-align: center;
-  border-bottom: 1px solid #222; /* borde más oscuro */
+  border-bottom: 1px solid #222; 
   color: #999;
 }
 
@@ -49,29 +56,29 @@ h1 {
   height: 50px;
   border-radius: 6px;
   object-fit: cover;
-  border: 1px solid #222; /* borde más oscuro */
+  border: 1px solid #222; 
 }
 
-/* Botones */
+
 button {
   padding: 8px 14px;
   border: none;
   border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
-  background-color: #1a1a1a; /* gris oscuro */
+  background-color: #1a1a1a; 
   color: #ccc;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #333; /* gris oscuro más claro al pasar mouse */
+  background-color: #333; 
   transform: none;
 }
 
-/* Colores para tipos de botón */
+
 .btn-danger {
-  background-color: #4a1313; /* rojo oscuro más apagado */
+  background-color: #4a1313; 
   color: #ddd;
 }
 
@@ -80,7 +87,7 @@ button:hover {
 }
 
 .btn-secondary {
-  background-color: #333333; /* gris oscuro en lugar de violeta */
+  background-color: #333333;
   color: #ddd;
 }
 
@@ -89,7 +96,7 @@ button:hover {
 }
 
 .btn-primary {
-  background-color: #444; /* gris oscuro */
+  background-color: #444; 
   color: #ddd;
   font-weight: bold;
 }
@@ -110,5 +117,5 @@ p {
   text-align: center;
   font-size: 1.2rem;
   margin-top: 40px;
-  color: #666; /* gris oscuro */
+  color: #8d8d8d; 
 }

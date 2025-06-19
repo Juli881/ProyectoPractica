@@ -27,11 +27,10 @@
 
   <div class="acciones mt-3">
     <button (click)="vaciarFavorito()" class="btn btn-secondary">Vaciar Favoritos</button>
-    <button (click)="realizarFavorito()" class="btn btn-primary">Confirmar Favoritos</button>
   </div>
 </div>
 
 
-<div *ngIf="productosEnFavorito.length === 0">
-  <p>No hay productos en favoritos.</p>
+<div *ngIf="productosEnFavorito.length === 0" >
+  <p class="sin-productos">No hay productos en favoritos.</p>
 </div>

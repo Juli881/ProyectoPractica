@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
 
 .intro-section h1,
 .intro-section p {
-  font-family: 'Pirata One', cursive;
-  color: #444;
+ font-family: 'UnifrakturCook', cursive;
+  color: #5c5b5b;
   text-align: center;
   text-shadow: 1px 1px 3px #000;
-  margin: 0;
+  margin: 0.5rem;
 }
 
 .intro-section h1 {
-  font-size: 2rem; /* tamaño más grande para el título */
+  font-size: 2rem; 
+  ;
 }
 
 .intro-section p {
-  font-size: 1.2rem; /* tamaño más grande para el párrafo */
+  font-size: 1.2rem; 
   margin-top: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 2rem;
   color: #666;
 }
 

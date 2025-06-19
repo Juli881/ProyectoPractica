@@ -1,8 +1,9 @@
 /* General */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'UnifrakturCook', cursive;
   background-color: #0f0f0f;
-  color: #999; /* gris medio-oscuro */
+  color: #999;
+  /* gris medio-oscuro */
   margin: 0;
   padding: 0;
 }
@@ -17,7 +18,9 @@ body {
 
 /* Título */
 h1 {
-  color: #aaa; /* gris medio, no tan brillante */
+  color: #aaa;
+
+  font-family: 'UnifrakturCook', cursive;
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 30px;
@@ -25,8 +28,8 @@ h1 {
 
 /* Tabla */
 .table-container {
-  width: 95%;
-  max-width: 1100px;
+  width: 120%;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -54,12 +57,14 @@ h1 {
   padding: 14px;
   border-bottom: 1px solid #2a2a2a;
   vertical-align: middle;
-  color: #888; /* texto más tenue */
+  color: #888;
+  /* texto más tenue */
 }
 
 /* Precio más oscuro */
 .table td.precio {
-  color: #777; /* más oscuro que el texto normal */
+  color: #777;
+  /* más oscuro que el texto normal */
   font-weight: 500;
 }
 
