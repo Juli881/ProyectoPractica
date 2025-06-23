@@ -1,82 +1,55 @@
-/* Fuente Oswald para los links del navbar */
+/* Importar fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap');
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #1e1e1e; /* Gris oscuro como fondo general */
+  background-color: #1e1e1e;
   color: white;
 }
 
-.logo-img {
-  height: 52px;
+/* Logo Under con UnifrakturCook */
+.tituloTitulo {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10rem;
 }
 
+.tituloTitulo a {
+  color: rgb(85, 26, 26) !important;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+  transition: color 0.3s ease;
+}
+
+.tituloTitulo a:hover {
+  color: rgb(180, 80, 80) !important;
+}
+
+/* Navbar general */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000; /* Fondo negro del navbar */
+  background-color: #000000;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   position: relative;
 }
 
-/* Logo centrado */
-.navbar-logo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: 2rem;
-}
-
-.navbar-links li {
-  display: flex;
-  align-items: center;
-}
-
-/* Estilo de los links del navbar */
-.navbar a,
-.navbar-links a,
-.dropdown-item {
-  font-family: 'Oswald', sans-serif;
-  text-decoration: none;
-  color: white !important; /* Forzado en blanco */
-  font-weight: 500;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar-links a:hover,
-.dropdown-item:hover {
-  color: #dcdcdc !important; /* Gris claro al pasar el mouse */
-}
-
-.carrito-link i {
-  margin-right: 5px;
-}
-
-/* Menú desplegable */
+/* Dropdown menú */
 .dropdown {
   position: relative;
+  margin-right: 1rem;
 }
 
 .dropdown-toggle {
@@ -84,6 +57,7 @@ body {
   border: none;
   color: #e0e0e0;
   font-family: 'Oswald', sans-serif;
+  /* Oswald para los botones del menú */
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
@@ -97,7 +71,7 @@ body {
 }
 
 .dropdown-menu {
-  background-color: #121212 !important; /* Gris muy oscuro */
+  background-color: #121212 !important;
   border: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
   margin-top: 0.5rem;
@@ -110,10 +84,47 @@ body {
   background-color: transparent;
   color: white;
   padding: 0.5rem 1rem;
+  font-family: 'Oswald', sans-serif;
+  /* Oswald para items dropdown */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-item:hover {
   background-color: #2c2c2c;
   color: #ffffff;
+}
+
+/* Enlaces de navegación a la derecha */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-nav li {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: white !important;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  font-family: 'Oswald', sans-serif;
+  /* Oswald para links de navbar */
+  transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  color: #dcdcdc !important;
+}
+
+/* Carrito */
+.carrito-link i {
+  margin-right: 5px;
 }
