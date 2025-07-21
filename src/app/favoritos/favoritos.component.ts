@@ -26,11 +26,12 @@ export class FavoritosComponent implements OnInit {
     this.productosEnFavorito[index].cantidad++;
   }
 
-  quitarCantidad(index: number) {
+ /* quitarCantidad(index: number) {
     if (this.productosEnFavorito[index].cantidad > 1) {
       this.productosEnFavorito[index].cantidad--;
     }
   }
+*/ 
 
   eliminarFavorito(productoId: number) {
     this.favoritosService.eliminarFavorito(productoId);

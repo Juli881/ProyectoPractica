@@ -28,18 +28,22 @@ export class CarritoService {
   vaciarCarrito() {
     this.carritoSubject.next([])
   }
+//Borra todos los productos del carrito y emite un arreglo vacío.
+
 
   //Metodo para actualizar la cantidad de un producto en el carrito 
   actualizarCantidad(productoId: number, nuevaCantidad: number) {
     // Recorremos el carrito y actualizamos la cantidad del producto con el ID dado
     const productos = this.carritoSubject.getValue().map(item => {
       if (item.producto.id === productoId) {
-        // Retornamos una copia del producto con la nueva cantidad
+        // Busca el producto por ID y actualiza su cantidad
         return { ...item, cantidad: nuevaCantidad }
       }
-      return item
+      // Cambia la cantidad de ese producto por la nueva cantidad que le indicaste.
+      //
+      return item // Si no es el producto buscado, lo deja como esta
     })
-    // Emitimos el nuevo estado del carrito
+    // Emitimos el nuevo estado del carrito (BehaviorSubject)
     this.carritoSubject.next(productos)
   }
 

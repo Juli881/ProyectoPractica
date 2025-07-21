@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import jsPDF from 'jspdf';
+import jsPDF from 'jspdf'; // Librería para crear PDFs en JavaScript.
 import { CarritoService } from '../../servicios/carrito.service';
 
 @Component({
@@ -16,11 +16,13 @@ export class CompraComponent implements OnInit {
  // Declaración del formulario reactivo para la compra
 formularioCompra!: FormGroup;
 
+// Variables usadas para manejar datos y estado del componente.
+
 // Variable para almacenar el total de la compra (subtotal + envío)
 total!: number;
 
 // Costo fijo de envío
-envio = 1500;
+envio = 7500;
 
 // indicador para saber si la factura ya fue generada
 facturaGenerada = false;
@@ -58,7 +60,7 @@ ngOnInit(): void {
 // Calcula el total de la compra sumando el subtotal y el costo de envío
 calcularTotal(): number {
   const subtotal = this.carritoService.obtenerTotal();  // Obtiene subtotal del carrito
-  this.total = subtotal + this.envio;                    // Suma envío al subtotal
+  this.total = subtotal + this.envio;                    // Suma costo de envío
   return this.total;
 }
 
@@ -69,6 +71,7 @@ emitirFactura(): void {
   const totalFinal = this.calcularTotal();                   // Total calculado con envío
 
   // Construye el objeto factura con toda la info necesaria
+  // La FaCtUra
   this.factura = {
     cliente: datosCliente,
     productos: productos,

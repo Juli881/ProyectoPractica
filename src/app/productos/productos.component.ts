@@ -14,6 +14,9 @@ import { FavoritosService } from '../servicios/favoritos.service';
 })
 export class ProductosComponent {
   productos: Producto[] = [
+    // Es una propiedad que contiene un arreglo de objetos Producto. En este caso,
+    // guarda la lista de guitarras para mostrar.
+
     {
       id: 1,
       nombre: 'Guitarra eléctrica Jackson JS Series JS11',
@@ -112,6 +115,22 @@ export class ProductosComponent {
       descripcion: 'Sonido británico con distorsión poderosa y afinador incorporado.',
       precio: 114999,
       imagen: 'assets/amplificador4.png',
+      disponibilidad: true
+    },
+    {
+      id: 105,
+      nombre: 'LANEY LX10 LANEY',
+      descripcion: 'Amplificador combo compacto de 10 watts.',
+      precio: 170700,
+      imagen: 'assets/amplificador 105.png',
+      disponibilidad: true
+    },
+    {
+      id: 106,
+      nombre: 'LANEY LX65R LANEY',
+      descripcion: 'Amplificador combo de 65W con parlante de 12".',
+      precio: 648567,
+      imagen: 'assets/amplificador106.png',
       disponibilidad: true
     }
   ];

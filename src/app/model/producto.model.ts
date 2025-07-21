@@ -8,3 +8,5 @@ export interface Producto {
     cantidad?: number;
     
 }
+
+//Una interfaz es un molde o contrato que describe cómo debe ser un objeto.

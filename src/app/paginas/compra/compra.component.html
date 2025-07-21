@@ -42,7 +42,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="direccion" class="form-label fw-semibold">Direccion <span class="text-danger">*</span></label>
+            <label for="direccion" class="form-label fw-semibold">Dirección <span class="text-danger">*</span></label>
             <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
                 <input id="direccion" formControlName="direccion" class="form-control"
@@ -50,7 +50,7 @@
             </div>
             <div *ngIf="formularioCompra.get('direccion')?.touched && formularioCompra.get('direccion')?.invalid"
                 class="form-text text danger">
-                La direccion es obligatorio.
+                La dirección es obligatoria.
             </div>
         </div>
         <div class="row g-3 mb-3">
@@ -84,7 +84,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="metodoPago" class=" form-label fw-semibold">Metdo de Pago <span
+            <label for="metodoPago" class=" form-label fw-semibold">Metodo de Pago <span
                     class="text-danger">*</span></label>
             <select id="metodoPago" formControlName="metodoPago" class="form-select">
                 <option value="" disabled selected>Seleccione metodo de pago</option>
