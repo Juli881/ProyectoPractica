@@ -1,65 +1,30 @@
 <main class="main-container">
-
   <div class="intro-section">
     <h1>Guitarras Eléctricas Destacadas</h1>
     <p>Explora nuestra colección premium de guitarras eléctricas para todos los niveles y estilos.</p>
   </div>
 
   <div class="cards-container">
-
-    <div class="card" tabindex="0" aria-describedby="desc1">
-      <img class="card-image" src="assets/guitarra1.png" alt="Fender Stratocaster">
+    <div *ngFor="let producto of productos" class="card" tabindex="0">
+      <span
+        class="favorito-icon"
+        (click)="agregarAFavoritos(producto)"
+        title="Agregar a favoritos"
+      >
+        ♡
+      </span>
+      <img class="card-image" [src]="producto.imagen" [alt]="producto.nombre" />
       <div class="card-content">
-        <h2 id="desc1">Fender Stratocaster</h2>
-        <p>Un clásico icónico con sonido brillante y versátil, perfecto para rock, blues y más.</p>
-           <p class="cuotas">
-          <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
+        <h2>{{ producto.nombre }}</h2>
+        <p>{{ producto.descripcion }}</p>
+        <p class="cuotas">
+          <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de {{ producto.precio / 3 | number: '1.0-0' }} ({{ producto.precio }})
         </p>
-        <p><strong>Precio:</strong> $1200 USD</p>
-        <a href="#" class="btn" role="button">Comprar</a>
+        <p><strong>Precio:</strong> {{ producto.precio }}</p>
+        <button type="button" class="btn btn-outline-primary" (click)="agregarAlCarrito(producto)">
+          Agregar al carrito
+        </button>
       </div>
     </div>
-
-    <div class="card" tabindex="0" aria-describedby="desc2">
-      <img class="card-image" src="assets/guitarra2.png" alt="Gibson Les Paul">
-      <div class="card-content">
-        <h2 id="desc2">Gibson Les Paul</h2>
-        <p>Con cuerpo sólido y sustain increíble, ideal para hard rock y heavy metal.</p>
-           <p class="cuotas">
-          <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
-        </p>
-        <p><strong>Precio:</strong> $2300 USD</p>
-        <a href="#" class="btn" role="button">Comprar</a>
-      </div>
-    </div>
-
-    <div class="card" tabindex="0" aria-describedby="desc3">
-      <img class="card-image" src="assets/guitarra5.png" alt="Ibanez RG">
-      <div class="card-content">
-        <h2 id="desc3">Ibanez RG</h2>
-        <p>Diseñada para velocidad y precisión, favorita entre guitarristas de metal.</p>
-           <p class="cuotas">
-          <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
-        </p>
-        <p><strong>Precio:</strong> $900 USD</p>
-        <a href="#" class="btn" role="button">Comprar</a>
-      </div>
-    </div>
-
-    <div class="card" tabindex="0" aria-describedby="desc4">
-      
-      <img class="card-image" src="assets/guitarra4.png" alt="PRS Custom 24">
-      <div class="card-content">
-        <h2 id="desc4">PRS Custom 24</h2>
-        <p>Elegancia y versatilidad con acabados premium, ideal para estudios.</p>
-           <p class="cuotas">
-          <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
-        </p>
-        <p><strong>Precio:</strong> $2500 USD</p>
-        <a href="#" class="btn" role="button">Comprar</a>
-      </div>
-    </div>
-
   </div>
-
 </main>

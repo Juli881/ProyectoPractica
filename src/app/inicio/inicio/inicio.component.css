@@ -1,6 +1,7 @@
+/* ---------- Intro ---------- */
 .intro-section h1,
 .intro-section p {
- font-family: 'UnifrakturCook', cursive;
+  font-family: 'UnifrakturCook', cursive;
   color: #5c5b5b;
   text-align: center;
   text-shadow: 1px 1px 3px #000;
@@ -8,120 +9,140 @@
 }
 
 .intro-section h1 {
-  font-size: 2rem; 
-  ;
+  font-size: 2rem;
 }
 
 .intro-section p {
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   margin-top: 2px;
   margin-bottom: 2rem;
   color: #666;
 }
 
+/* ---------- Reset & base ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #121212;
-    /* fondo negro oscuro */
-    color: #ccc;
-    /* texto gris claro */
-    min-height: 100vh;
+  background-color: #121212;
+  color: #ccc;
+  min-height: 100vh;
 }
 
+/* ---------- Layout ---------- */
 .main-container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    /* tarjetas más delgadas */
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 24px;
 }
 
+/* ---------- Card ---------- */
 .card {
-    background-color: #1b1b1b;
-    border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    cursor: default;
-    height: auto;
-    border: 1px solid #2e2e2e;
-    transition: box-shadow 0.3s ease;
-    max-width: 270px;
-    margin: 0 auto;
+  background-color: #1b1b1b;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  height: auto;
+  border: 1px solid #2e2e2e;
+  transition: box-shadow 0.3s ease;
+  max-width: 270px;
+  margin: 0 auto;
+  position: relative; 
 }
 
 .card:hover,
 .card:focus {
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 1);
 }
+
 
 .card-image {
-
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    background-color: #1b1b1b;
-    padding: 0; 
-    border-top: 8px solid #1b1b1b;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background-color: #1b1b1b;
+  padding: 0;
+  border-top: 8px solid #1b1b1b;
 }
 
+
 .card-content {
-    padding: 16px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-content h2 {
-    font-size: 1rem;
-    color: #bbb;
-    margin-bottom: 8px;
-    font-weight: 600;
-    line-height: 1.2;
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 8px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .card-content p {
-    color: #888;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    line-height: 1.4;
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
+/* ---------- Botón ---------- */
 .btn {
-    align-self: flex-start;
-    background-color: #222;
-    color: #ccc;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.8rem;
-    border: 1.5px solid #444;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    user-select: none;
+  align-self: flex-start;
+  background-color: #222;
+  color: #ccc;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: 1.5px solid #444;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  user-select: none;
 }
 
 .btn:hover,
 .btn:focus {
-    background-color: #333;
-    border-color: #666;
-    color: #eee;
+  background-color: #333;
+  border-color: #666;
+  color: #eee;
 }
 
+
 .card:focus-visible {
-    outline: 2px solid #555;
-    outline-offset: 2px;
+  outline: 2px solid #555;
+  outline-offset: 2px;
+}
+
+
+.favorito-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.4rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+.favorito-icon:hover {
+  transform: scale(1.2);
+  color: #fdfdfd;
 }

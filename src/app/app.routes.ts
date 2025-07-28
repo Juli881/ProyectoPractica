@@ -6,6 +6,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { Component } from '@angular/core';
 import { CompraComponent } from './paginas/compra/compra.component';
+import { RegistrarseComponent } from './formulario/registrarse/registrarse.component';
 
 
 export const routes: Routes = [
@@ -21,5 +22,7 @@ export const routes: Routes = [
 
     { path: 'favoritos', component: FavoritosComponent },
 
-    {path: 'compra', component: CompraComponent}
+    {path: 'compra', component: CompraComponent},
+
+    {path : 'registrarse', component:RegistrarseComponent}
 ];

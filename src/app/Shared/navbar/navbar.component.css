@@ -8,7 +8,9 @@ body {
   background-color: #1e1e1e;
   color: white;
 }
-
+.fa-solid.fa-moon{
+ font-size: 8px;
+}
 /* Logo Under con UnifrakturCook */
 .tituloTitulo {
   font-family: 'UnifrakturCook', cursive;
