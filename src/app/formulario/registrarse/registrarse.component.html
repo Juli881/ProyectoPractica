@@ -1,1 +1,37 @@
-<p>registrarse works!</p>
+<h2 class="text-center mb-4">Crear Cuenta</h2>
+<form [formGroup]="formularioRegistro" (ngSubmit)="registrarse()" class="mx-auto" style="max-width:600px;">
+
+  <div class="mb-3">
+    <label for="nombre" class="form-label fw-semibold">Nombre Completo <span class="text-danger">*</span></label>
+    <input id="nombre" formControlName="nombre" class="form-control" placeholder="Tu nombre completo" />
+    <div *ngIf="formularioRegistro.get('nombre')?.touched && formularioRegistro.get('nombre')?.invalid" class="form-text text-danger">
+      El nombre es obligatorio.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label fw-semibold">Correo Electrónico <span class="text-danger">*</span></label>
+    <input id="email" type="email" formControlName="email" class="form-control" placeholder="ejemplo@correo.com" />
+    <div *ngIf="formularioRegistro.get('email')?.touched && formularioRegistro.get('email')?.invalid" class="form-text text-danger">
+      El correo es obligatorio y debe ser válido.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label fw-semibold">Contraseña <span class="text-danger">*</span></label>
+    <input id="password" type="password" formControlName="password" class="form-control" placeholder="Contraseña" />
+    <div *ngIf="formularioRegistro.get('password')?.touched && formularioRegistro.get('password')?.invalid" class="form-text text-danger">
+      La contraseña es obligatoria (mínimo 6 caracteres).
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="confirmPassword" class="form-label fw-semibold">Confirmar Contraseña <span class="text-danger">*</span></label>
+    <input id="confirmPassword" type="password" formControlName="confirmPassword" class="form-control" placeholder="Repite la contraseña" />
+    <div *ngIf="formularioRegistro.get('confirmPassword')?.touched && formularioRegistro.get('confirmPassword')?.invalid" class="form-text text-danger">
+      La confirmación es obligatoria y debe coincidir con la contraseña.
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="formularioRegistro.invalid">Crear Cuenta</button>
+</form>

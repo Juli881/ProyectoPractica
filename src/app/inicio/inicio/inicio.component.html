@@ -7,11 +7,11 @@
   <div class="cards-container">
     <div *ngFor="let producto of productos" class="card" tabindex="0">
       <span
-        class="favorito-icon"
+        class="favorito-icono"
         (click)="agregarAFavoritos(producto)"
         title="Agregar a favoritos"
       >
-        ♡
+        ♥
       </span>
       <img class="card-image" [src]="producto.imagen" [alt]="producto.nombre" />
       <div class="card-content">
@@ -22,6 +22,37 @@
         </p>
         <p><strong>Precio:</strong> {{ producto.precio }}</p>
         <button type="button" class="btn btn-outline-primary" (click)="agregarAlCarrito(producto)">
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="intro-section">
+    <h1>Amplificadores Destacados</h1>
+    <p>Explora nuestra selección de amplificadores de alta calidad, diseñados para ofrecer potencia, claridad y el mejor sonido.</p>
+  </div>
+
+  <div class="cards-container">
+    <div *ngFor="let ampli of amplificadores" class="card" tabindex="0">
+      <span
+        class="favorito-icono"
+        (click)="agregarAFavoritos(ampli)"
+        title="Agregar a favoritos"
+      >
+        ♥
+      </span>
+      <img class="card-image" [src]="ampli.imagen" [alt]="ampli.nombre" />
+      <div class="card-content">
+        <h2>{{ ampli.nombre }}</h2>
+        <p>{{ ampli.descripcion }}</p>
+        <p class="cuotas">
+          <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de {{ ampli.precio / 3 | number: '1.0-0' }} ({{ ampli.precio }})
+        </p>
+        <p><strong>Precio:</strong> {{ ampli.precio }}</p>
+        <button type="button" class="btn btn-outline-primary" (click)="agregarAlCarrito(ampli)">
           Agregar al carrito
         </button>
       </div>

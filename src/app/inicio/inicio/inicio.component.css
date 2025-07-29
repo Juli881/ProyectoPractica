@@ -50,93 +50,102 @@ body {
 .card {
   background-color: #1b1b1b;
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   cursor: default;
-  height: auto;
+  height: 439px; /* Altura fija para consistencia */
   border: 1px solid #2e2e2e;
   transition: box-shadow 0.3s ease;
-  max-width: 270px;
+  width: 227px;
   margin: 0 auto;
-  position: relative; 
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* asegura fuente legible */
 }
 
+/* Hover efecto */
 .card:hover,
 .card:focus {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 1);
 }
 
-
+/* ---------- Imagen ---------- */
 .card-image {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;
+  width: 90%;
+  height: 160px;               /* tamaño fijo para que no cambie */
+  object-fit: cover;
+  margin: 12px auto 10px;      /* margen arriba y abajo controlado */
   background-color: #1b1b1b;
-  padding: 0;
-  border-top: 8px solid #1b1b1b;
+  border-radius: 4px;
+  display: block;
 }
 
-
+/* ---------- Contenido ---------- */
 .card-content {
-  padding: 16px;
+  padding: 8px 12px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 6px;                   /* espacio vertical entre elementos */
+  width: 100%;
+  font-family: 'UnifrakturCook', cursive; /* mantiene la fuente especial */
+  color: #ccc;
 }
 
+/* Título */
 .card-content h2 {
-  font-size: 1rem;
-  color: #bbb;
-  margin-bottom: 8px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.3;
   font-weight: 600;
-  line-height: 1.2;
+  color: #ccc;
 }
 
+/* Descripción */
 .card-content p {
-  color: #888;
-  font-size: 0.8rem;
-  margin-bottom: 10px;
+  margin: 0;
+  font-size: 0.9rem;
   line-height: 1.4;
+  color: #999;
+  flex-grow: 1;
 }
 
 /* ---------- Botón ---------- */
 .btn {
   align-self: flex-start;
-  background-color: #222;
-  color: #ccc;
+  background-color: transparent;
+  color: #aaa;
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.8rem;
-  border: 1.5px solid #444;
+  border: 1px solid #444;
+  letter-spacing: 0.5px;
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn:hover,
 .btn:focus {
-  background-color: #333;
+  background-color: #2a2a2a;
   border-color: #666;
   color: #eee;
 }
 
-
+/* ---------- Accesibilidad foco ---------- */
 .card:focus-visible {
   outline: 2px solid #555;
   outline-offset: 2px;
 }
 
-
-.favorito-icon {
+/* ---------- Icono favorito ---------- */
+.favorito-icono {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  right: 0px;
   font-size: 1.4rem;
-  color: #ffffff;
+  color: #8d0a0a;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.3s ease;
   z-index: 10;

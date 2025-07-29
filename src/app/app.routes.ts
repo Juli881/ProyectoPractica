@@ -22,7 +22,8 @@ export const routes: Routes = [
 
     { path: 'favoritos', component: FavoritosComponent },
 
-    {path: 'compra', component: CompraComponent},
+    { path: 'compra', component: CompraComponent },
 
-    {path : 'registrarse', component:RegistrarseComponent}
+    { path: 'registrarse', component: RegistrarseComponent }
+
 ];
