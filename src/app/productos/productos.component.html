@@ -1,3 +1,55 @@
+<div class="filtros">
+  <div class="row mb-3">
+    <div class="col-md-3">
+      <label>Categoria:</label>
+      <select class="form-select" [(ngModel)]="selectedCategory" name="categoria">
+        <option value="">Todas</option>
+        <option *ngFor="let categoria of categories" [value]="categoria">{{ categoria }}</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <label>Marca:</label>
+      <select class="form-select" [(ngModel)]="selectedBrand" name="marca">
+        <option value="">Todas</option>
+        <option *ngFor="let marca of marca" [value]="marca">{{ marca }}</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label>Precio min:</label>
+      <input type="number" class="form-control" [(ngModel)]="minprecio" name="minprecio">
+    </div>
+    <div class="col-md-2">
+      <label>Precio max:</label>
+      <input type="number" class="form-control" [(ngModel)]="maxprecio" name="maxprecio">
+    </div>
+    <div class="col-md-2 d-flex align-items-end">
+      <button class="btn btn-secondary w-100" (click)="resetFilters()">Limpiar</button>
+      <div class="button-top"></div>
+    </div>
+  </div>
+</div>
+
+<div class="card-container">
+  <ng-container *ngIf="filteredProducts && filteredProducts.length">
+    <ng-container *ngFor="let producto of filteredProducts">
+      <div *ngIf="producto.disponibilidad" class="card">
+        <img [src]="producto.imagen" alt="{{producto.nombre}}" class="product-image">
+        <h2>{{producto.nombre}}</h2>
+        <p>{{producto.descripcion}}</p>
+        <p>PRECIO: {{producto.precio}}</p>
+        <p>Cantidad: {{producto.cantidad}}</p>
+        <p>Marca: {{producto.marca}}</p>
+        <i class="bi bi-hand-thumbs-up"></i>
+        <button type="button" class="btn btn-outline-primary" (click)="agregar(producto)">Agregar al carrito</button>
+        
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <div *ngIf="filteredProducts.length==0" class="text-muted"> No se encontraron productos que coincidan con los filtros.</div>
+</div>
+
+
 <h1 class="titulo-seccion">Guitarras</h1>
 
 <!-- Sección de Guitarras -->
@@ -9,7 +61,7 @@
         <img [src]="producto.imagen" alt="{{producto.nombre}}" class="product-image">
         <h2>{{producto.nombre}}</h2>
         <p>{{producto.descripcion}}</p>
-        <p>PRECIO: {{producto.precio | currency:'ARS' }}</p>
+        <p>PRECIO: {{producto.precio}}</p>
         <p class="cuotas">
           <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
         </p>
@@ -30,11 +82,31 @@
       <img [src]="amp.imagen" alt="{{amp.nombre}}" class="product-image">
       <h2>{{amp.nombre}}</h2>
       <p>{{amp.descripcion}}</p>
-      <p>PRECIO: {{amp.precio | currency:'ARS' }}</p>
+      <p>PRECIO: {{amp.precio}}</p>
       <p class="cuotas">
         <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de $685.672 ($2.057.016)
       </p>
       <button type="button" class="btn btn-outline-primary" (click)="agregar(amp)">
+        Agregar al carrito
+      </button>
+    </div>
+  </ng-container>
+</div>
+
+<!-- Sección Vinilos -->
+<h2 class="titulo-seccion">Vinilos</h2>
+<div class="card-container">
+  <ng-container *ngFor="let vinilo of vinilos">
+    <div *ngIf="vinilo.disponibilidad" class="card">
+      <span class="favorito-icon" (click)="agregarAFavoritos(vinilo)" title="Agregar a favoritos">♡</span>
+      <img [src]="vinilo.imagen" alt="{{vinilo.nombre}}" class="product-image">
+      <h2>{{vinilo.nombre}}</h2>
+      <p>{{vinilo.descripcion}}</p>
+      <p>PRECIO: {{vinilo.precio}}</p>
+      <p class="cuotas">
+        <i class="bi bi-credit-card"></i> CUOTA SIMPLE 3 cuotas de ${{ (vinilo.precio / 3) | number:'1.0-0' }} (${{ vinilo.precio | number:'1.0-0' }})
+      </p>
+      <button type="button" class="btn btn-outline-primary" (click)="agregar(vinilo)">
         Agregar al carrito
       </button>
     </div>

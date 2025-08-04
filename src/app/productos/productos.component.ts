@@ -4,26 +4,26 @@ import { RouterModule } from '@angular/router';
 import { Producto } from '../model/producto.model';
 import { CarritoService } from '../servicios/carrito.service';
 import { FavoritosService } from '../servicios/favoritos.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent {
   productos: Producto[] = [
-    // Es una propiedad que contiene un arreglo de objetos Producto. En este caso,
-    // guarda la lista de guitarras para mostrar.
-
     {
       id: 1,
       nombre: 'Guitarra eléctrica Jackson JS Series JS11',
-      descripcion: 'Esta guitarra Dinky se caracteriza por su liviandad, al ser más pequeña que el resto. Esto permite comodidad en el juego sin descuidar la excelencia en el sonido para que des todo en el escenario.',
+      descripcion: 'La Jackson JS Series es una guitarra eléctrica de nivel intermedio que combina un diseño agresivo con buen rendimiento.',
       precio: 454770,
       imagen: 'assets/guitarra1.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Jackson'
     },
     {
       id: 2,
@@ -31,7 +31,9 @@ export class ProductosComponent {
       descripcion: 'Una guitarra icónica con un cuerpo sólido de caoba, tapa de arce y pastillas Burstbucker que ofrecen un tono clásico con sustain infinito.',
       precio: 1050000,
       imagen: 'assets/guitarra2.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Gibson'
     },
     {
       id: 3,
@@ -39,7 +41,9 @@ export class ProductosComponent {
       descripcion: 'Cuerpo de aliso, mástil en forma de "C moderna", y tres pastillas single coil. Perfecta para blues, rock y funk.',
       precio: 699000,
       imagen: 'assets/guitarra3.jpg',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Fender'
     },
     {
       id: 4,
@@ -47,7 +51,9 @@ export class ProductosComponent {
       descripcion: 'Diseñada para velocidad y técnica, con trémolo Edge-Zero II y mástil Wizard III ultrarápido.',
       precio: 350000,
       imagen: 'assets/guitarra4.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Ibanez'
     },
     {
       id: 5,
@@ -55,7 +61,9 @@ export class ProductosComponent {
       descripcion: 'Guitarra estilo Strat con gran versatilidad. Ideal para principiantes y músicos intermedios.',
       precio: 240000,
       imagen: 'assets/guitarra5.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Kramer'
     },
     {
       id: 6,
@@ -63,7 +71,9 @@ export class ProductosComponent {
       descripcion: 'Con cuerpo tipo Les Paul, pastillas humbucker y diseño moderno. Gran relación calidad-precio.',
       precio: 290000,
       imagen: 'assets/guitarra6.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'ESP'
     },
     {
       id: 7,
@@ -71,7 +81,9 @@ export class ProductosComponent {
       descripcion: 'Guitarra ideal para iniciarse, con gran tono y excelente construcción.',
       precio: 180000,
       imagen: 'assets/guitarra7.jpg',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Yamaha'
     },
     {
       id: 8,
@@ -79,7 +91,9 @@ export class ProductosComponent {
       descripcion: 'Con pastillas humbucker y trémolo, es una opción versátil para diversos estilos musicales.',
       precio: 410000,
       imagen: 'assets/guitarra8.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'PRS SE'
     }
   ];
 
@@ -91,7 +105,9 @@ export class ProductosComponent {
       descripcion: 'Amplificador versátil con efectos integrados, ideal para práctica y escenario.',
       precio: 124999,
       imagen: 'assets/amplificador1.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'amplificadores',
+      marca: 'Fender'
     },
     {
       id: 102,
@@ -99,7 +115,9 @@ export class ProductosComponent {
       descripcion: 'Compacto pero potente, con efectos digitales y diseño clásico Marshall.',
       precio: 99999,
       imagen: 'assets/amplificador2.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'amplificadores',
+      marca: 'Marshall'
     },
     {
       id: 103,
@@ -107,7 +125,9 @@ export class ProductosComponent {
       descripcion: 'Amplificador de modelado digital con 50W de potencia y gran respuesta dinámica.',
       precio: 159999,
       imagen: 'assets/amplificador3.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'amplificadores',
+      marca: 'Boss'
     },
     {
       id: 104,
@@ -115,7 +135,9 @@ export class ProductosComponent {
       descripcion: 'Sonido británico con distorsión poderosa y afinador incorporado.',
       precio: 114999,
       imagen: 'assets/amplificador4.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'amplificadores',
+      marca: 'Orange Crush'
     },
     {
       id: 105,
@@ -123,7 +145,9 @@ export class ProductosComponent {
       descripcion: 'Amplificador combo compacto de 10 watts.',
       precio: 170700,
       imagen: 'assets/amplificador 105.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'amplificadores',
+      marca: 'Laney'
     },
     {
       id: 106,
@@ -131,14 +155,41 @@ export class ProductosComponent {
       descripcion: 'Amplificador combo de 65W con parlante de 12".',
       precio: 648567,
       imagen: 'assets/amplificador106.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'amplificadores',
+      marca: 'Laney'
     }
   ];
+  // Seccion Vinilos 
+  vinilos: Producto[] = [
+  {
+    id: 201,
+    nombre: 'Disintegration (Vinilo) [Importado]',
+    descripcion: 'The Cure.',
+    precio: 4500,
+    imagen: 'assets/disintegration.jpg',
+    disponibilidad: true,
+    categoria: 'Vinilos',
+    marca: 'Apple Records'
+  },
+  {
+    id: 202,
+    nombre: 'Vinilo Pink Floyd - The Dark Side of the Moon',
+    descripcion: 'Vinilo edición limitada, alta fidelidad y packaging especial.',
+    precio: 6000,
+    imagen: 'assets/vinilo2.png',
+    disponibilidad: true,
+    categoria: 'Vinilos',
+    marca: 'Harvest'
+  }
+
+];
+
 
   constructor(
     private carritoService: CarritoService,
     private FavoritosService: FavoritosService
-  ) {}
+  ) { }
 
   agregar(producto: Producto): void {
     if (producto.disponibilidad) {
@@ -156,5 +207,45 @@ export class ProductosComponent {
     } else {
       alert('Producto no disponible');
     }
+  }
+
+  searchTerm: string = '';
+  selectedCategory: string = '';
+  selectedBrand: string = '';
+  minprecio: number | null = null;
+  maxprecio: number | null = null;
+
+get categories(): string[] {
+  const todas = [...this.productos, ...this.amplificadores, ...this.vinilos];
+  return [...new Set(todas.map(p => p.categoria))];
+}
+
+get marca(): string[] {
+  const todas = [...this.productos, ...this.amplificadores];
+  return [...new Set(todas.map(p => p.marca))];
+}
+
+
+  onSearch(event: Event): void {
+    event.preventDefault();
+  }
+  resetFilters(): void {
+    this.searchTerm = '';
+    this.selectedCategory = '';
+    this.selectedBrand = '';
+    this.minprecio = null;
+    this.maxprecio = null;
+  }
+
+  get filteredProducts(): Producto[] {
+    const todos = [...this.productos, ...this.amplificadores];
+
+    return todos.filter(p =>
+      (this.searchTerm === '' || p.nombre.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
+      (this.selectedCategory === '' || p.categoria === this.selectedCategory) &&
+      (this.selectedBrand === '' || p.marca === this.selectedBrand) &&
+      (this.minprecio === null || p.precio >= this.minprecio) &&
+      (this.maxprecio === null || p.precio <= this.maxprecio)
+    );
   }
 }

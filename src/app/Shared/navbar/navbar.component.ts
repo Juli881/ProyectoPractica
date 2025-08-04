@@ -3,23 +3,35 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { Producto } from '../../model/producto.model';
 import { CarritoService } from '../../servicios/carrito.service';
+import { UsuarioComponent } from '../../usuario/usuario.component';
+import { UsuarioService } from '../../servicios/usuario.service'; // ⬅️ IMPORTANTE
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, CommonModule, RouterModule],
+  imports: [RouterLink, CommonModule, RouterModule, UsuarioComponent],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
   cantidadProductos: number = 0;
+  nombreUsuario: string = 'Usuario';
 
-  constructor(private carritoservice: CarritoService) { }
+  // ⬅️ Agregá el servicio al constructor
+  constructor(
+    private carritoservice: CarritoService,
+    private usuarioService: UsuarioService // ⬅️ Agregado
+  ) {}
 
   ngOnInit(): void {
-
+    // Carrito
     this.carritoservice.carrito$.subscribe((productos: { producto: Producto, cantidad: number }[]) => {
       this.cantidadProductos = productos.reduce((total, item) => total + item.cantidad, 0);
+    });
+
+    
+    this.usuarioService.nombreUsuario$.subscribe(nombre => {
+      this.nombreUsuario = nombre;
     });
   }
 
@@ -34,11 +46,10 @@ export class NavbarComponent implements OnInit {
       let checked: boolean = toggle.checked;
       document.body.classList.toggle('dark-mode', checked);
       if (checked) {
-        label_toggle!.innerHTML = '<i class = "fa-solid fa-sun"></i>'
+        label_toggle!.innerHTML = '<i class = "fa-solid fa-sun"></i>';
       } else {
-        label_toggle!.innerHTML = '<i class = "fa-regular fa-moon"></i>'
+        label_toggle!.innerHTML = '<i class = "fa-regular fa-moon"></i>';
       }
     }
   }
 }
-

@@ -1,4 +1,6 @@
-/* ---------- Intro ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Almendra&display=swap');
+
+
 .intro-section h1,
 .intro-section p {
   font-family: 'UnifrakturCook', cursive;
@@ -19,12 +21,11 @@
   color: #666;
 }
 
-/* ---------- Reset & base ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Almedra';
 }
 
 body {
@@ -33,7 +34,6 @@ body {
   min-height: 100vh;
 }
 
-/* ---------- Layout ---------- */
 .main-container {
   max-width: 1200px;
   margin: 50px auto;
@@ -60,7 +60,7 @@ body {
   width: 227px;
   margin: 0 auto;
   position: relative;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* asegura fuente legible */
+  font-family: 'Almendra'; /* Aplicar Almendra a toda la tarjeta */
 }
 
 /* Hover efecto */
@@ -72,9 +72,9 @@ body {
 /* ---------- Imagen ---------- */
 .card-image {
   width: 90%;
-  height: 160px;               /* tamaño fijo para que no cambie */
+  height: 160px;              
   object-fit: cover;
-  margin: 12px auto 10px;      /* margen arriba y abajo controlado */
+  margin: 20px auto 10px;      /* margen arriba y abajo */
   background-color: #1b1b1b;
   border-radius: 4px;
   display: block;
@@ -88,7 +88,7 @@ body {
   flex-direction: column;
   gap: 6px;                   /* espacio vertical entre elementos */
   width: 100%;
-  font-family: 'UnifrakturCook', cursive; /* mantiene la fuente especial */
+  font-family: 'Almendra'; /* Aplicar Almendra al contenido */
   color: #ccc;
 }
 
@@ -124,7 +124,7 @@ body {
   letter-spacing: 0.5px;
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   user-select: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Almendra', serif;
 }
 
 .btn:hover,
@@ -143,9 +143,10 @@ body {
 /* ---------- Icono favorito ---------- */
 .favorito-icono {
   position: absolute;
+  top: 0px;
   right: 0px;
   font-size: 1.4rem;
-  color: #8d0a0a;
+  color: #d6d6d6;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.3s ease;
   z-index: 10;

@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg">
 
   <!-- Menú desplegable a la izquierda -->
@@ -15,30 +14,36 @@
       <li><a class="dropdown-item" routerLink="/carrito">Carrito</a></li>
     </ul>
   </div>
-  
-  <!-- Logo -->
- <div class="tituloTitulo">
-  <a routerLink="/">Under</a>
-</div>
 
+  <!-- Logo -->
+  <div class="tituloTitulo">
+    <a routerLink="/">Under</a>
+  </div>
 
   <!-- Enlaces a la derecha -->
   <ul class="navbar-nav ms-auto d-flex flex-row align-items-center list-unstyled gap-3">
+
     <li><a class="nav-link" routerLink="/">Inicio</a></li>
+
+    <!-- Dropdown de Registro -->
     <div class="dropdown me-3">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown"
-      aria-expanded="false">Creá tu cuenta
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="menuDropdown" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Creá tu cuenta
       </button>
-    <ul class="dropdown-menu" aria-labelledby="menuDropdown">
-      <li><a class="dropdown-item" routerLink="/registrarse">Creá tu cuenta</a></li>
-    </ul>
-  </div>
+      <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+        <li><a class="dropdown-item" routerLink="/registrarse">Creá tu cuenta</a></li>
+      </ul>
+    </div>
+
     <li><a class="nav-link" routerLink="/productos">Productos</a></li>
     <li><a class="nav-link" routerLink="/contacto">Contacto</a></li>
     <li><a class="nav-link" routerLink="/favoritos">Favoritos</a></li>
-<label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i>
-</label>
-<input type="checkbox" id="toggle" (click)="cambiarFondo()">
+
+
+    <label for="toggle" id="label_toggle"><i class="fa-solid fa-moon"></i></label>
+    <input type="checkbox" id="toggle" (click)="cambiarFondo()">
+
 
     <li class="carrito-link">
       <a class="nav-link" [routerLink]="['/carrito']">
@@ -46,5 +51,11 @@
         Carrito <span *ngIf="cantidadProductos > 0">({{ cantidadProductos }})</span>
       </a>
     </li>
+
+    <li>
+      <app-usuario [nombre]="nombreUsuario"></app-usuario>
+    </li>
+
+
   </ul>
 </nav>

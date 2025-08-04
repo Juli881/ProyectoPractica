@@ -19,7 +19,9 @@ export class InicioComponent {
       descripcion: 'Esta guitarra Dinky se caracteriza por su liviandad...',
       precio: 454770,
       imagen: 'assets/guitarra1.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Jackson'
     },
     {
       id: 2,
@@ -27,7 +29,9 @@ export class InicioComponent {
       descripcion: 'Una guitarra icónica con un cuerpo sólido de caoba...',
       precio: 1050000,
       imagen: 'assets/guitarra2.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Gibson'
     },
     {
       id: 3,
@@ -35,7 +39,9 @@ export class InicioComponent {
       descripcion: 'Guitarra eléctrica de diseño clásico, ideal para principiantes y músicos intermedios.',
       precio: 1350000,
       imagen: 'assets/guitarra7.jpg',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Yamaha'
     },
     {
       id: 4,
@@ -43,7 +49,9 @@ export class InicioComponent {
       descripcion: 'Versátil guitarra con cuerpo de caoba y mástil de arce.',
       precio: 980000,
       imagen: 'assets/guitarra10.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'PRS'
     },
     {
       id: 5,
@@ -51,7 +59,9 @@ export class InicioComponent {
       descripcion: 'Guitarra eléctrica de alta velocidad con puente flotante y pastillas humbucker.',
       precio: 820000,
       imagen: 'assets/guitarra5.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Guitarras',
+      marca: 'Ibanez'
     }
   ];
 
@@ -62,7 +72,9 @@ export class InicioComponent {
       descripcion: 'Amplificador a válvulas de 10W con gran versatilidad tonal.',
       precio: 1500000,
       imagen: 'assets/amplificador8.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Amplificadores',
+      marca: 'Peavey'
     },
     {
       id: 102,
@@ -70,7 +82,9 @@ export class InicioComponent {
       descripcion: 'Amplificador combo de 20W ideal para principiantes y práctica.',
       precio: 350000,
       imagen: 'assets/amplificador2.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Amplificadores',
+      marca: 'Fender'
     },
     {
       id: 103,
@@ -78,7 +92,9 @@ export class InicioComponent {
       descripcion: 'Clásico amplificador de 15W con sonido británico y excelente claridad.',
       precio: 900000,
       imagen: 'assets/amplificador3.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Amplificadores',
+      marca: 'Vox'
     },
     {
       id: 104,
@@ -86,7 +102,9 @@ export class InicioComponent {
       descripcion: 'Amplificador a válvulas compacto de 5W con reverb integrada.',
       precio: 600000,
       imagen: 'assets/amplificador4.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Amplificadores',
+      marca: 'Blackstar'
     },
     {
       id: 105,
@@ -94,7 +112,9 @@ export class InicioComponent {
       descripcion: 'Potencia y calidad en un diseño compacto y de caja cerrada que mejora la resonancia.',
       precio: 700000,
       imagen: 'assets/amplificador7.png',
-      disponibilidad: true
+      disponibilidad: true,
+      categoria: 'Amplificadores',
+      marca: 'Sunset'
     }
   ];
 
